@@ -35,4 +35,12 @@ class MYSQLdb
 
         return $data;
     }
+
+    public function queryNoSelect($sql)
+    {
+        $resultado = $this->conn->query($sql);
+
+        return $resultado;
+    }
+    
 }

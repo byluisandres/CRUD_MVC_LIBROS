@@ -19,11 +19,14 @@
     ?>
     <div class="container">
         <section class="mt-5">
-            <a class="btn btn btn-default" href='<?php echo RUTA_APP . "libros/alta/" ?>'> Añadir Libro</a>
+            <a class="btn btn-dark-green" href='<?php echo RUTA_APP . "libros/alta/" ?>'>
+                <i class="fas fa-plus"></i> Añadir Libro
+            </a>
+            <h1 class="text-center">Lista de Libros</h1>
             <table class="table table-bordered center">
                 <thead class="text-center">
                     <tr>
-                        <th>id</th>
+                        <th hidden>id</th>
                         <th scope="col">Título</th>
                         <th>Autor</th>
                         <th>Editorial</th>
@@ -32,13 +35,17 @@
                 <tbody>
                     <?php for ($i = 0; $i < count($datos); $i++) : ?>
                         <tr>
-                            <td> <?php echo $datos[$i]["id"]; ?></td>
+                            <td hidden> <?php echo $datos[$i]["id"]; ?></td>
                             <td> <?php echo $datos[$i]["titulo"]; ?></td>
                             <td> <?php echo $datos[$i]["autor"]; ?></td>
                             <td> <?php echo $datos[$i]["editorial"]; ?></td>
                             <td>
-                                <a href="<?php echo RUTA_APP . "libros/modificar/" . $datos[$i]["id"]; ?>" class="btn btn btn-default"> Editar</a>
-                                <a href="<?php echo RUTA_APP . "libros/borrar/" . $datos[$i]["id"]; ?>" class="btn btn-danger"> Borrar</a>
+                                <a href="<?php echo RUTA_APP . "libros/modificar/" . $datos[$i]["id"]; ?>" class="btn btn btn-success">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="<?php echo RUTA_APP . "libros/borrar/" . $datos[$i]["id"]; ?>" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                </a>
                             </td>
                         </tr>
                     <?php endfor; ?>

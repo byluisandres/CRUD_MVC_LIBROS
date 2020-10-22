@@ -23,22 +23,4 @@ class Controlador
             die("La vista no existe");
         }
     }
-
-    //modificar
-    public function modificar($id)
-    {
-        print "modificar " . $id;
-    }
-
-    //borrar
-    public function borrar($id)
-    {
-        print "Borrar " . $id;
-    }
-
-    //borrar
-    public function alta()
-    {
-        print "Alta ";
-    }
 }

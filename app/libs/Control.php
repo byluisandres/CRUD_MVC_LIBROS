@@ -16,7 +16,7 @@ class Control
 
         if ($url != "" && file_exists("../app/controladores/" . ucwords($url[0]) . ".php")) {
             $this->controlador = ucwords($url[0]);
-            //unset($url[0]);
+            unset($url[0]);
         }
         require_once "../app/controladores/" . ucwords($this->controlador) . ".php";
 
